@@ -4,7 +4,8 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 <?php
-echo "odificado fichero";
+echo "modificado fichero";
+echo "rama test";
 ?>
 
 
