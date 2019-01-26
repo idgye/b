@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Sum of all TextBox values using jQuery</title>
+<script type="text/javascript"
+	src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js">
+</script>
+<script type="text/javascript">
+	$(function() {
+		$("#addAll").click(function() {
+			var add = 0;
+			$(".amt").each(function() {
+				add += Number($(this).val());
+			});
+			$("#para").text("El total es : " + add);
+		});
+	});
+
+	 $(document).ready(function(){
+		$("div#container").on('click', 'button.alert', function() {
+		    alert(1);
+		});
+	 });
+
+
+	$("button#add").click(function() {
+    	var html = "<button class='alert'>Alert!</button>";
+   	 	$("button.alert:last").parent().append(html);
+	});
+
+
+	$(".calc").on( "click", function() {
+    	var cual=$(this).attr("id");
+    	alert('he apretado'+cual);
+	});
+</script>
+</head>
+<body>
+	<input id="Text1" class="amt" type="text" /><br />
+	<input id="Text2" class="amt" type="text" /><br />
+	<input id="Text3" class="amt" type="text" /><br />
+	<input id="addAll" type="button" value="Sum all Textboxes" /><br />
+	<p id="para" />
+
+	<table>
+		<tr>
+			<td>Alumnos</td>
+			<td>Uni1</td><td>Act1.1</td><td>Act1.2</td>
+			<td>Uni2</td><td>Act2.1</td><td>Act2.2</td><td>Act2.3</td>
+
+			<td>
+				<!--<div id="container">
+        			<button class="calc">Calcular</button>
+    			</div> -->
+    			Nota Pou
+    		</td>
+		</tr>
+		<tr>
+			<td>Pepito</td>
+			<td><div class="uni_100" style="color:blue;">4</div></td> <!-- UNI1 -->
+			<td><div class="act_100">7</div></td> <!-- ACT1.1 -->
+			<td><div class="act_100">5</div></td> <!-- ACT1.2 -->
+			<td><div class="uni_100" style="color:blue;">4</div></td> <!-- UNI2 -->
+			<td><div class="act_100">3</div></td> <!-- ACT2.1 -->
+			<td><div class="act_100">5</div></td> <!-- ACT2.2 -->
+			<td><div class="act_100">5</div></td> <!-- ACT2.3 -->
+			<td><button class="calc">Calcular</button><input id="b_100"/></td>
+		</tr>
+		<tr>
+			<td>Juanito</td>
+			<td><div class="uni_101" style="color:blue;">4</div></td> <!-- UNI1 -->
+			<td><div class="act_101">3</div></td> <!-- ACT1 -->
+			<td><div class="act_101">5</div></td> <!-- ACT2 -->
+			<td><div class="uni_101" style="color:blue;">4</div></td> <!-- UNI2 -->
+			<td><div class="act_101">3</div></td> <!-- ACT2.1 -->
+			<td><div class="act_101">5</div></td> <!-- ACT2.2 -->
+			<td><div class="act_101">5</div></td> <!-- ACT2.3 -->
+			<td><button class="calc">Calcular</button><input id="b_101"/></td>
+		</tr>
+	</table>
+
+
+
+	<!-- <button id="add">Add new</button>
+    <div id="container">
+        <button class="alert">alert!</button>
+    </div> -->
+</body>
+</html>
